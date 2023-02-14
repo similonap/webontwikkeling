@@ -1,10 +1,11 @@
 {
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "devcontainer",
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-    "customizations": {
-        // Configure properties specific to VS Code.
-        "vscode": {
-        }
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "forwardPorts": [3000],
+  "customizations": {
+      // Configure properties specific to VS Code.
+      "vscode": {
       }
+    }
 }
