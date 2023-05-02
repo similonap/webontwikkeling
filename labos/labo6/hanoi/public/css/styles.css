@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.pole {
+    width: 10px;
+    height: 200px;
+    background-color: #333;
+    position: relative;
+    align-items: center;
+    display: flex; /* added this */
+    flex-direction: column-reverse; /* added this */
+}
+
+.selected {
+    background-color: #f00;
+}
+
+.pole1 {
+    margin-left: 150px
+}
+
+.pole2 {
+    margin-left: 150px
+}
+
+.pole::before {
+    content: "";
+    width: 100px;
+    height: 10px;
+    background-color: #333;
+    position: absolute;
+    bottom: -10px;
+    left: -45px;
+}
+
+.disk {
+    height: 20px;
+}
+
+.disk-0 {
+    width: 80px;
+    background-color: #ff0000;
+}
+
+.disk-1 {
+    width: 70px;
+    background-color: #ffa500;
+}
+
+.disk-2 {
+    width: 60px;
+    background-color: #ffff00;
+}
+
+.disk-3 {
+    width: 50px;
+    background-color: #008000;
+}
+
+.disk-4 {
+    width: 40px;
+    background-color: #0000ff;
+}
+
+.disk-5 {
+    width: 30px;
+    background-color: #800080;
+}
+
+.error {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 54, 54, 0.89);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    font-family: "Roboto", sans-serif; /* use a modern font */
+    font-size: 18px; /* increase the font size */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* add some shadow effect */
+}
+
+.success {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(43, 228, 43);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    font-family: "Roboto", sans-serif; /* use a modern font */
+    font-size: 18px; /* increase the font size */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* add some shadow effect */
+}

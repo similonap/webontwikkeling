@@ -1,0 +1,18 @@
+<html>
+    <body>
+
+        <% if (me !== undefined) { %>
+            My name is <%= me.name %> and I am <%= me.age %> years old<br />
+            <img src="<%= me.profilePic %>" width="250" />
+        <% } %>
+
+        <table width="800" border="1">
+        <% for (let name of names) { %>
+            <tr><td><%= name %></td></tr>
+        <% } %>
+        </table>
+
+
+        <img src="/img/teethachu.jpeg"/>
+    </body>
+</html>

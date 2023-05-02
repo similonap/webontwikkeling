@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="/css/styles.css" />
+        <script>
+            let fromPole = null;
+            let toPole = null;
+    
+            function poleClick(poleid) {
+                if (fromPole === null) {
+                    fromPole = poleid;
+                } else {
+                    toPole = poleid;
+                    window.location = `?from=${fromPole}&to=${toPole}`;
+                }
+            }
+        </script>
+        <title>Hanoi</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="pole" id="pole-a" onclick="pokeClick(">
+                <div class="disk disk-1"></div>
+                <div class="disk disk-2"></div>
+                <div class="disk disk-3"></div>
+                <div class="disk disk-4"></div>
+                <div class="disk disk-5"></div>
+                <div class="disk disk-6"></div>
+            </div>
+
+            <div class="pole" id="pole-b" style="margin-left: 150px" onclick="window.location = '?pole=b'"></div>
+            <div class="pole" id="pole-c" style="margin-left: 150px" onclick="window.location = '?pole=c'"></div>
+        </div>
+    </body>
+</html>

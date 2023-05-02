@@ -1,0 +1,16 @@
+<table width="800" border="1">
+    <thead>
+        <td></td>
+        <% for (let i=1;i<=10;i++) { %>
+            <th><%= i %></th>
+        <% } %>
+    </thead>
+    <% for (let i=1;i<=10;i++) { %>
+        <tr>
+        <th><%= i %></th>
+        <% for (let j=1;j<=10;j++) { %>
+            <td><%= i * j %></td>
+        <% } %>
+        </tr>
+    <% } %>
+</table>

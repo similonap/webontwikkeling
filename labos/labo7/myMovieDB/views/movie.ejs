@@ -1,0 +1,22 @@
+<%- include('header') %>
+<img src="<%= movie.image %>" class="movie-detail-header">
+
+<div class="content-wrapper">
+
+
+<div class="content-wrapper">
+    <div class="movie-detail-description">
+    <h2><%= movie.name %></h2>
+    <%= movie.description %>
+    <br/><br/>
+    <b>The score of this movie is <%= movie.myScore %> / 100</b>
+
+    </div>
+
+    <div class="custom-button">
+        <a href="/movies">Back to the overview</a>
+    </div>
+
+</div>
+</div>
+<%- include('footer') %>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Math for Kids</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <% if (feedback) { %>
+                <div class="feedback">
+                    <%= feedback %>
+                </div>
+            <% } %>
+            <form class="math-form" method="post">
+                <input type="number" name="number1" value="<%= number1 %>" class="num1" readonly />
+                <input type="hidden" name="operator" value="<%= operator %>" />
+                <span class="operator">
+                    <% if (operator === '*') { %>
+                    <img src="/images/multiplication.png" alt="multiply" />
+                    <% } else if (operator === '/') { %>
+                    <img src="/images/division.png" alt="divide" />
+                    <% } %>
+                </span>
+                <input type="number" name="number2" value="<%= number2 %>" class="num1" readonly />
+                <span class="equals">
+                    <img src="/images/equals.png" alt="equals" />
+                </span>
+                <input type="number" name="result" value="0" class="result" />
+                <input type="submit" value="Check" class="check" />
+            </form>
+
+            <div class="score">
+                <%= timesCorrect %> of <%= timesCorrect + timesWrong %> correct.
+            </div>
+        </div>
+    </body>
+</html>

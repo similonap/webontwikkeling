@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sticky Footer Example</title>
+        <link rel="stylesheet" href="/styles.css" />
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div class="page-container">
+            <header class="header">
+                <img src="/lmdb.png" class="logo" />
+                <h1 class="sitename">Llama Movie Database</h1>
+            </header>
+            <!-- navigation bar -->
+            <nav class="navbar">
+                <div class="tabs">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/movies">Movies</a></li>
+                </ul>
+                </div>
+                <div class="login">
+                    <% if (email) { %>
+                        <%= email %> <a href="/logout">Logout</a>
+                    <% } else { %>
+                        <a href="/login">Login</a>
+                    <% } %>
+                </div>
+            </nav>

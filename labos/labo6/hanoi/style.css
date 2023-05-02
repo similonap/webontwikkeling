@@ -1,0 +1,130 @@
+/* basic CSS starts here */
+
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+  
+  div.game {
+    width: 350px;
+    height: 140px;
+    margin: 10px;
+    position: relative;
+    background-color: #008;
+  }
+  
+  div.tower {
+    width: 100px;
+    position: absolute;
+    bottom: 1px;
+    background-color: #0000f0;
+  }
+  
+  #t1 {
+    left: 10px
+  }
+  
+  #t2 {
+    left: 120px
+  }
+  
+  #t3 {
+    left: 230px
+  }
+  
+  div.disk,
+  div.bottom {
+    text-align: center;
+  }
+  
+  
+  /*----------------------------------------------
+     basic CSS ends here 
+     comment out all CSS below
+     to see ASCII art version
+     of pen 
+  -----------------------------------------------*/
+  
+  
+  /* */
+  
+  .game {
+    font-size: 0;
+    background-color: #a0a0a0 !important;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom-style: ridge;
+    border-width: 5px;
+    box-shadow: 7px 7px 3px #505050;
+  }
+  
+  .tower {
+    z-index: 0;
+    background-color: rgba(0, 0, 255, 0.1) !important;
+  }
+  
+  #t1 {
+    left: 10px
+  }
+  
+  #t2 {
+    left: 120px
+  }
+  
+  #t3 {
+    left: 230px
+  }
+  
+  .disk {
+    height: 20px;
+    border-radius: 8px;
+    box-shadow: 15px 3px 7px #606060;
+  }
+  
+  .bottom {
+    box-shadow: 15px 3px 7px #606060;
+  }
+  
+  .disk,
+  .bottom {
+    font-size: 0px;
+  }
+  
+  #s1 {
+    width: 30px;
+    margin-left: 35px;
+    background-color: #ffff00;
+    background: radial-gradient(40% 30%, #ffff00, #45352a);
+  }
+  
+  #s2 {
+    width: 50px;
+    margin-left: 25px;
+    background-color: #ff4000;
+    background: radial-gradient(40% 30%, #ff4000, #602727);
+  }
+  
+  #s3 {
+    width: 70px;
+    margin-left: 15px;
+    background-color: #ff00ff;
+    background: radial-gradient(40% 30%, #ff00ff, #601a60);
+  }
+  
+  #s4 {
+    width: 90px;
+    margin-left: 5px;
+    background-color: #40ff00;
+    background: radial-gradient(40% 30%, #40ff00, #276027);
+  }
+  
+  div.bottom {
+    height: 120px;
+    width: 10px;
+    border-radius: 3px;
+    position: absolute;
+    left: 45px;
+    bottom: 0px;
+    background-color: #80c0ff;
+    background: radial-gradient(40% 45%, #80c0ff, #1a60d0);
+    z-index: -1;
+  }

@@ -1,0 +1,46 @@
+<%- include('header') %>
+<div class="content-wrapper">
+    <% if (success) { %>
+        <div class="success-message">
+            <%= success %>
+        </div>
+        <% } %>
+<div class="movie-card-grid">
+<% for (let i=0;i<movies.length;i++) { 
+        let movie = movies[i];
+        let stars = Math.round(movie.myScore / 100 * 5);
+        let starsToSpan = (stars) => {
+            let span = '';
+            for (let i=0;i<stars;i++) {
+                span += '<span class="star filled-star">★</span>';
+            }
+            for (let i=0;i<5-stars;i++) {
+                span += '<span class="star unfilled-star">★</span>';
+            }
+            return span;
+        }
+    %>
+    <a href="/movies/<%= i %>">
+    <div class="movie-card">
+        <div style="position: relative">
+            <img src="<%= movie.image %>" alt="Movie Image" />
+            <h2 class="movie-title"><%= movie.name %></h2>
+        </div>
+        <div class="star-rating">
+            <%- starsToSpan(stars) %>
+        </div>
+    </div>
+    </a>
+<% } %>
+</div>
+<div class="center-layout">
+<% if (email) { %>
+<div class="custom-button">
+    <a href="/addmovie">Add movie</a>
+</div>
+<% } %>
+</div>
+
+
+</div>
+<%- include('footer') %>
